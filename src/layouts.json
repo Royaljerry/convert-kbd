@@ -1,0 +1,2046 @@
+{
+  "com.apple.keylayout.ABC" : [
+    {
+      "keyCode" : 0,
+      "modifier" : "normal",
+      "text" : "a"
+    },
+    {
+      "keyCode" : 0,
+      "modifier" : "shift",
+      "text" : "A"
+    },
+    {
+      "keyCode" : 0,
+      "modifier" : "option",
+      "text" : "å"
+    },
+    {
+      "keyCode" : 0,
+      "modifier" : "shiftOption",
+      "text" : "Å"
+    },
+    {
+      "keyCode" : 1,
+      "modifier" : "normal",
+      "text" : "s"
+    },
+    {
+      "keyCode" : 1,
+      "modifier" : "shift",
+      "text" : "S"
+    },
+    {
+      "keyCode" : 1,
+      "modifier" : "option",
+      "text" : "ß"
+    },
+    {
+      "keyCode" : 1,
+      "modifier" : "shiftOption",
+      "text" : "Í"
+    },
+    {
+      "keyCode" : 2,
+      "modifier" : "normal",
+      "text" : "d"
+    },
+    {
+      "keyCode" : 2,
+      "modifier" : "shift",
+      "text" : "D"
+    },
+    {
+      "keyCode" : 2,
+      "modifier" : "option",
+      "text" : "∂"
+    },
+    {
+      "keyCode" : 2,
+      "modifier" : "shiftOption",
+      "text" : "Î"
+    },
+    {
+      "keyCode" : 3,
+      "modifier" : "normal",
+      "text" : "f"
+    },
+    {
+      "keyCode" : 3,
+      "modifier" : "shift",
+      "text" : "F"
+    },
+    {
+      "keyCode" : 3,
+      "modifier" : "option",
+      "text" : "ƒ"
+    },
+    {
+      "keyCode" : 3,
+      "modifier" : "shiftOption",
+      "text" : "Ï"
+    },
+    {
+      "keyCode" : 4,
+      "modifier" : "normal",
+      "text" : "h"
+    },
+    {
+      "keyCode" : 4,
+      "modifier" : "shift",
+      "text" : "H"
+    },
+    {
+      "keyCode" : 4,
+      "modifier" : "option",
+      "text" : "˙"
+    },
+    {
+      "keyCode" : 4,
+      "modifier" : "shiftOption",
+      "text" : "Ó"
+    },
+    {
+      "keyCode" : 5,
+      "modifier" : "normal",
+      "text" : "g"
+    },
+    {
+      "keyCode" : 5,
+      "modifier" : "shift",
+      "text" : "G"
+    },
+    {
+      "keyCode" : 5,
+      "modifier" : "option",
+      "text" : "©"
+    },
+    {
+      "keyCode" : 5,
+      "modifier" : "shiftOption",
+      "text" : "˝"
+    },
+    {
+      "keyCode" : 6,
+      "modifier" : "normal",
+      "text" : "z"
+    },
+    {
+      "keyCode" : 6,
+      "modifier" : "shift",
+      "text" : "Z"
+    },
+    {
+      "keyCode" : 6,
+      "modifier" : "option",
+      "text" : "Ω"
+    },
+    {
+      "keyCode" : 6,
+      "modifier" : "shiftOption",
+      "text" : "¸"
+    },
+    {
+      "keyCode" : 7,
+      "modifier" : "normal",
+      "text" : "x"
+    },
+    {
+      "keyCode" : 7,
+      "modifier" : "shift",
+      "text" : "X"
+    },
+    {
+      "keyCode" : 7,
+      "modifier" : "option",
+      "text" : "≈"
+    },
+    {
+      "keyCode" : 7,
+      "modifier" : "shiftOption",
+      "text" : "˛"
+    },
+    {
+      "keyCode" : 8,
+      "modifier" : "normal",
+      "text" : "c"
+    },
+    {
+      "keyCode" : 8,
+      "modifier" : "shift",
+      "text" : "C"
+    },
+    {
+      "keyCode" : 8,
+      "modifier" : "option",
+      "text" : "ç"
+    },
+    {
+      "keyCode" : 8,
+      "modifier" : "shiftOption",
+      "text" : "Ç"
+    },
+    {
+      "keyCode" : 9,
+      "modifier" : "normal",
+      "text" : "v"
+    },
+    {
+      "keyCode" : 9,
+      "modifier" : "shift",
+      "text" : "V"
+    },
+    {
+      "keyCode" : 9,
+      "modifier" : "option",
+      "text" : "√"
+    },
+    {
+      "keyCode" : 9,
+      "modifier" : "shiftOption",
+      "text" : "◊"
+    },
+    {
+      "keyCode" : 10,
+      "modifier" : "normal",
+      "text" : "§"
+    },
+    {
+      "keyCode" : 10,
+      "modifier" : "shift",
+      "text" : "±"
+    },
+    {
+      "keyCode" : 10,
+      "modifier" : "option",
+      "text" : "§"
+    },
+    {
+      "keyCode" : 10,
+      "modifier" : "shiftOption",
+      "text" : "±"
+    },
+    {
+      "keyCode" : 11,
+      "modifier" : "normal",
+      "text" : "b"
+    },
+    {
+      "keyCode" : 11,
+      "modifier" : "shift",
+      "text" : "B"
+    },
+    {
+      "keyCode" : 11,
+      "modifier" : "option",
+      "text" : "∫"
+    },
+    {
+      "keyCode" : 11,
+      "modifier" : "shiftOption",
+      "text" : "ı"
+    },
+    {
+      "keyCode" : 12,
+      "modifier" : "normal",
+      "text" : "q"
+    },
+    {
+      "keyCode" : 12,
+      "modifier" : "shift",
+      "text" : "Q"
+    },
+    {
+      "keyCode" : 12,
+      "modifier" : "option",
+      "text" : "œ"
+    },
+    {
+      "keyCode" : 12,
+      "modifier" : "shiftOption",
+      "text" : "Œ"
+    },
+    {
+      "keyCode" : 13,
+      "modifier" : "normal",
+      "text" : "w"
+    },
+    {
+      "keyCode" : 13,
+      "modifier" : "shift",
+      "text" : "W"
+    },
+    {
+      "keyCode" : 13,
+      "modifier" : "option",
+      "text" : "∑"
+    },
+    {
+      "keyCode" : 13,
+      "modifier" : "shiftOption",
+      "text" : "„"
+    },
+    {
+      "keyCode" : 14,
+      "modifier" : "normal",
+      "text" : "e"
+    },
+    {
+      "keyCode" : 14,
+      "modifier" : "shift",
+      "text" : "E"
+    },
+    {
+      "keyCode" : 14,
+      "modifier" : "option",
+      "text" : "´"
+    },
+    {
+      "keyCode" : 14,
+      "modifier" : "shiftOption",
+      "text" : "´"
+    },
+    {
+      "keyCode" : 15,
+      "modifier" : "normal",
+      "text" : "r"
+    },
+    {
+      "keyCode" : 15,
+      "modifier" : "shift",
+      "text" : "R"
+    },
+    {
+      "keyCode" : 15,
+      "modifier" : "option",
+      "text" : "®"
+    },
+    {
+      "keyCode" : 15,
+      "modifier" : "shiftOption",
+      "text" : "‰"
+    },
+    {
+      "keyCode" : 16,
+      "modifier" : "normal",
+      "text" : "y"
+    },
+    {
+      "keyCode" : 16,
+      "modifier" : "shift",
+      "text" : "Y"
+    },
+    {
+      "keyCode" : 16,
+      "modifier" : "option",
+      "text" : "¥"
+    },
+    {
+      "keyCode" : 16,
+      "modifier" : "shiftOption",
+      "text" : "Á"
+    },
+    {
+      "keyCode" : 17,
+      "modifier" : "normal",
+      "text" : "t"
+    },
+    {
+      "keyCode" : 17,
+      "modifier" : "shift",
+      "text" : "T"
+    },
+    {
+      "keyCode" : 17,
+      "modifier" : "option",
+      "text" : "†"
+    },
+    {
+      "keyCode" : 17,
+      "modifier" : "shiftOption",
+      "text" : "ˇ"
+    },
+    {
+      "keyCode" : 18,
+      "modifier" : "normal",
+      "text" : "1"
+    },
+    {
+      "keyCode" : 18,
+      "modifier" : "shift",
+      "text" : "!"
+    },
+    {
+      "keyCode" : 18,
+      "modifier" : "option",
+      "text" : "¡"
+    },
+    {
+      "keyCode" : 18,
+      "modifier" : "shiftOption",
+      "text" : "⁄"
+    },
+    {
+      "keyCode" : 19,
+      "modifier" : "normal",
+      "text" : "2"
+    },
+    {
+      "keyCode" : 19,
+      "modifier" : "shift",
+      "text" : "@"
+    },
+    {
+      "keyCode" : 19,
+      "modifier" : "option",
+      "text" : "™"
+    },
+    {
+      "keyCode" : 19,
+      "modifier" : "shiftOption",
+      "text" : "€"
+    },
+    {
+      "keyCode" : 20,
+      "modifier" : "normal",
+      "text" : "3"
+    },
+    {
+      "keyCode" : 20,
+      "modifier" : "shift",
+      "text" : "#"
+    },
+    {
+      "keyCode" : 20,
+      "modifier" : "option",
+      "text" : "£"
+    },
+    {
+      "keyCode" : 20,
+      "modifier" : "shiftOption",
+      "text" : "‹"
+    },
+    {
+      "keyCode" : 21,
+      "modifier" : "normal",
+      "text" : "4"
+    },
+    {
+      "keyCode" : 21,
+      "modifier" : "shift",
+      "text" : "$"
+    },
+    {
+      "keyCode" : 21,
+      "modifier" : "option",
+      "text" : "¢"
+    },
+    {
+      "keyCode" : 21,
+      "modifier" : "shiftOption",
+      "text" : "›"
+    },
+    {
+      "keyCode" : 22,
+      "modifier" : "normal",
+      "text" : "6"
+    },
+    {
+      "keyCode" : 22,
+      "modifier" : "shift",
+      "text" : "^"
+    },
+    {
+      "keyCode" : 22,
+      "modifier" : "option",
+      "text" : "§"
+    },
+    {
+      "keyCode" : 22,
+      "modifier" : "shiftOption",
+      "text" : "ﬂ"
+    },
+    {
+      "keyCode" : 23,
+      "modifier" : "normal",
+      "text" : "5"
+    },
+    {
+      "keyCode" : 23,
+      "modifier" : "shift",
+      "text" : "%"
+    },
+    {
+      "keyCode" : 23,
+      "modifier" : "option",
+      "text" : "∞"
+    },
+    {
+      "keyCode" : 23,
+      "modifier" : "shiftOption",
+      "text" : "ﬁ"
+    },
+    {
+      "keyCode" : 24,
+      "modifier" : "normal",
+      "text" : "="
+    },
+    {
+      "keyCode" : 24,
+      "modifier" : "shift",
+      "text" : "+"
+    },
+    {
+      "keyCode" : 24,
+      "modifier" : "option",
+      "text" : "≠"
+    },
+    {
+      "keyCode" : 24,
+      "modifier" : "shiftOption",
+      "text" : "±"
+    },
+    {
+      "keyCode" : 25,
+      "modifier" : "normal",
+      "text" : "9"
+    },
+    {
+      "keyCode" : 25,
+      "modifier" : "shift",
+      "text" : "("
+    },
+    {
+      "keyCode" : 25,
+      "modifier" : "option",
+      "text" : "ª"
+    },
+    {
+      "keyCode" : 25,
+      "modifier" : "shiftOption",
+      "text" : "·"
+    },
+    {
+      "keyCode" : 26,
+      "modifier" : "normal",
+      "text" : "7"
+    },
+    {
+      "keyCode" : 26,
+      "modifier" : "shift",
+      "text" : "&"
+    },
+    {
+      "keyCode" : 26,
+      "modifier" : "option",
+      "text" : "¶"
+    },
+    {
+      "keyCode" : 26,
+      "modifier" : "shiftOption",
+      "text" : "‡"
+    },
+    {
+      "keyCode" : 27,
+      "modifier" : "normal",
+      "text" : "-"
+    },
+    {
+      "keyCode" : 27,
+      "modifier" : "shift",
+      "text" : "_"
+    },
+    {
+      "keyCode" : 27,
+      "modifier" : "option",
+      "text" : "–"
+    },
+    {
+      "keyCode" : 27,
+      "modifier" : "shiftOption",
+      "text" : "—"
+    },
+    {
+      "keyCode" : 28,
+      "modifier" : "normal",
+      "text" : "8"
+    },
+    {
+      "keyCode" : 28,
+      "modifier" : "shift",
+      "text" : "*"
+    },
+    {
+      "keyCode" : 28,
+      "modifier" : "option",
+      "text" : "•"
+    },
+    {
+      "keyCode" : 28,
+      "modifier" : "shiftOption",
+      "text" : "°"
+    },
+    {
+      "keyCode" : 29,
+      "modifier" : "normal",
+      "text" : "0"
+    },
+    {
+      "keyCode" : 29,
+      "modifier" : "shift",
+      "text" : ")"
+    },
+    {
+      "keyCode" : 29,
+      "modifier" : "option",
+      "text" : "º"
+    },
+    {
+      "keyCode" : 29,
+      "modifier" : "shiftOption",
+      "text" : "‚"
+    },
+    {
+      "keyCode" : 30,
+      "modifier" : "normal",
+      "text" : "]"
+    },
+    {
+      "keyCode" : 30,
+      "modifier" : "shift",
+      "text" : "}"
+    },
+    {
+      "keyCode" : 30,
+      "modifier" : "option",
+      "text" : "‘"
+    },
+    {
+      "keyCode" : 30,
+      "modifier" : "shiftOption",
+      "text" : "’"
+    },
+    {
+      "keyCode" : 31,
+      "modifier" : "normal",
+      "text" : "o"
+    },
+    {
+      "keyCode" : 31,
+      "modifier" : "shift",
+      "text" : "O"
+    },
+    {
+      "keyCode" : 31,
+      "modifier" : "option",
+      "text" : "ø"
+    },
+    {
+      "keyCode" : 31,
+      "modifier" : "shiftOption",
+      "text" : "Ø"
+    },
+    {
+      "keyCode" : 32,
+      "modifier" : "normal",
+      "text" : "u"
+    },
+    {
+      "keyCode" : 32,
+      "modifier" : "shift",
+      "text" : "U"
+    },
+    {
+      "keyCode" : 32,
+      "modifier" : "option",
+      "text" : "¨"
+    },
+    {
+      "keyCode" : 32,
+      "modifier" : "shiftOption",
+      "text" : "¨"
+    },
+    {
+      "keyCode" : 33,
+      "modifier" : "normal",
+      "text" : "["
+    },
+    {
+      "keyCode" : 33,
+      "modifier" : "shift",
+      "text" : "{"
+    },
+    {
+      "keyCode" : 33,
+      "modifier" : "option",
+      "text" : "“"
+    },
+    {
+      "keyCode" : 33,
+      "modifier" : "shiftOption",
+      "text" : "”"
+    },
+    {
+      "keyCode" : 34,
+      "modifier" : "normal",
+      "text" : "i"
+    },
+    {
+      "keyCode" : 34,
+      "modifier" : "shift",
+      "text" : "I"
+    },
+    {
+      "keyCode" : 34,
+      "modifier" : "option",
+      "text" : "ˆ"
+    },
+    {
+      "keyCode" : 34,
+      "modifier" : "shiftOption",
+      "text" : "ˆ"
+    },
+    {
+      "keyCode" : 35,
+      "modifier" : "normal",
+      "text" : "p"
+    },
+    {
+      "keyCode" : 35,
+      "modifier" : "shift",
+      "text" : "P"
+    },
+    {
+      "keyCode" : 35,
+      "modifier" : "option",
+      "text" : "π"
+    },
+    {
+      "keyCode" : 35,
+      "modifier" : "shiftOption",
+      "text" : "∏"
+    },
+    {
+      "keyCode" : 36,
+      "modifier" : "normal",
+      "text" : "\r"
+    },
+    {
+      "keyCode" : 36,
+      "modifier" : "shift",
+      "text" : "\r"
+    },
+    {
+      "keyCode" : 36,
+      "modifier" : "option",
+      "text" : "\r"
+    },
+    {
+      "keyCode" : 36,
+      "modifier" : "shiftOption",
+      "text" : "\r"
+    },
+    {
+      "keyCode" : 37,
+      "modifier" : "normal",
+      "text" : "l"
+    },
+    {
+      "keyCode" : 37,
+      "modifier" : "shift",
+      "text" : "L"
+    },
+    {
+      "keyCode" : 37,
+      "modifier" : "option",
+      "text" : "¬"
+    },
+    {
+      "keyCode" : 37,
+      "modifier" : "shiftOption",
+      "text" : "Ò"
+    },
+    {
+      "keyCode" : 38,
+      "modifier" : "normal",
+      "text" : "j"
+    },
+    {
+      "keyCode" : 38,
+      "modifier" : "shift",
+      "text" : "J"
+    },
+    {
+      "keyCode" : 38,
+      "modifier" : "option",
+      "text" : "∆"
+    },
+    {
+      "keyCode" : 38,
+      "modifier" : "shiftOption",
+      "text" : "Ô"
+    },
+    {
+      "keyCode" : 39,
+      "modifier" : "normal",
+      "text" : "'"
+    },
+    {
+      "keyCode" : 39,
+      "modifier" : "shift",
+      "text" : "\""
+    },
+    {
+      "keyCode" : 39,
+      "modifier" : "option",
+      "text" : "æ"
+    },
+    {
+      "keyCode" : 39,
+      "modifier" : "shiftOption",
+      "text" : "Æ"
+    },
+    {
+      "keyCode" : 40,
+      "modifier" : "normal",
+      "text" : "k"
+    },
+    {
+      "keyCode" : 40,
+      "modifier" : "shift",
+      "text" : "K"
+    },
+    {
+      "keyCode" : 40,
+      "modifier" : "option",
+      "text" : "˚"
+    },
+    {
+      "keyCode" : 40,
+      "modifier" : "shiftOption",
+      "text" : ""
+    },
+    {
+      "keyCode" : 41,
+      "modifier" : "normal",
+      "text" : ";"
+    },
+    {
+      "keyCode" : 41,
+      "modifier" : "shift",
+      "text" : ":"
+    },
+    {
+      "keyCode" : 41,
+      "modifier" : "option",
+      "text" : "…"
+    },
+    {
+      "keyCode" : 41,
+      "modifier" : "shiftOption",
+      "text" : "Ú"
+    },
+    {
+      "keyCode" : 42,
+      "modifier" : "normal",
+      "text" : "\\"
+    },
+    {
+      "keyCode" : 42,
+      "modifier" : "shift",
+      "text" : "|"
+    },
+    {
+      "keyCode" : 42,
+      "modifier" : "option",
+      "text" : "«"
+    },
+    {
+      "keyCode" : 42,
+      "modifier" : "shiftOption",
+      "text" : "»"
+    },
+    {
+      "keyCode" : 43,
+      "modifier" : "normal",
+      "text" : ","
+    },
+    {
+      "keyCode" : 43,
+      "modifier" : "shift",
+      "text" : "<"
+    },
+    {
+      "keyCode" : 43,
+      "modifier" : "option",
+      "text" : "≤"
+    },
+    {
+      "keyCode" : 43,
+      "modifier" : "shiftOption",
+      "text" : "¯"
+    },
+    {
+      "keyCode" : 44,
+      "modifier" : "normal",
+      "text" : "\/"
+    },
+    {
+      "keyCode" : 44,
+      "modifier" : "shift",
+      "text" : "?"
+    },
+    {
+      "keyCode" : 44,
+      "modifier" : "option",
+      "text" : "÷"
+    },
+    {
+      "keyCode" : 44,
+      "modifier" : "shiftOption",
+      "text" : "¿"
+    },
+    {
+      "keyCode" : 45,
+      "modifier" : "normal",
+      "text" : "n"
+    },
+    {
+      "keyCode" : 45,
+      "modifier" : "shift",
+      "text" : "N"
+    },
+    {
+      "keyCode" : 45,
+      "modifier" : "option",
+      "text" : "˜"
+    },
+    {
+      "keyCode" : 45,
+      "modifier" : "shiftOption",
+      "text" : "˜"
+    },
+    {
+      "keyCode" : 46,
+      "modifier" : "normal",
+      "text" : "m"
+    },
+    {
+      "keyCode" : 46,
+      "modifier" : "shift",
+      "text" : "M"
+    },
+    {
+      "keyCode" : 46,
+      "modifier" : "option",
+      "text" : "µ"
+    },
+    {
+      "keyCode" : 46,
+      "modifier" : "shiftOption",
+      "text" : "Â"
+    },
+    {
+      "keyCode" : 47,
+      "modifier" : "normal",
+      "text" : "."
+    },
+    {
+      "keyCode" : 47,
+      "modifier" : "shift",
+      "text" : ">"
+    },
+    {
+      "keyCode" : 47,
+      "modifier" : "option",
+      "text" : "≥"
+    },
+    {
+      "keyCode" : 47,
+      "modifier" : "shiftOption",
+      "text" : "˘"
+    },
+    {
+      "keyCode" : 48,
+      "modifier" : "normal",
+      "text" : "\t"
+    },
+    {
+      "keyCode" : 48,
+      "modifier" : "shift",
+      "text" : "\t"
+    },
+    {
+      "keyCode" : 48,
+      "modifier" : "option",
+      "text" : "\t"
+    },
+    {
+      "keyCode" : 48,
+      "modifier" : "shiftOption",
+      "text" : "\t"
+    },
+    {
+      "keyCode" : 49,
+      "modifier" : "normal",
+      "text" : " "
+    },
+    {
+      "keyCode" : 49,
+      "modifier" : "shift",
+      "text" : " "
+    },
+    {
+      "keyCode" : 49,
+      "modifier" : "option",
+      "text" : " "
+    },
+    {
+      "keyCode" : 49,
+      "modifier" : "shiftOption",
+      "text" : " "
+    },
+    {
+      "keyCode" : 50,
+      "modifier" : "normal",
+      "text" : "`"
+    },
+    {
+      "keyCode" : 50,
+      "modifier" : "shift",
+      "text" : "~"
+    },
+    {
+      "keyCode" : 50,
+      "modifier" : "option",
+      "text" : "`"
+    },
+    {
+      "keyCode" : 50,
+      "modifier" : "shiftOption",
+      "text" : "`"
+    }
+  ],
+  "com.apple.keylayout.Hungarian" : [
+    {
+      "keyCode" : 0,
+      "modifier" : "normal",
+      "text" : "a"
+    },
+    {
+      "keyCode" : 0,
+      "modifier" : "shift",
+      "text" : "A"
+    },
+    {
+      "keyCode" : 0,
+      "modifier" : "option",
+      "text" : "ą"
+    },
+    {
+      "keyCode" : 0,
+      "modifier" : "shiftOption",
+      "text" : "Ą"
+    },
+    {
+      "keyCode" : 1,
+      "modifier" : "normal",
+      "text" : "s"
+    },
+    {
+      "keyCode" : 1,
+      "modifier" : "shift",
+      "text" : "S"
+    },
+    {
+      "keyCode" : 1,
+      "modifier" : "option",
+      "text" : "ß"
+    },
+    {
+      "keyCode" : 1,
+      "modifier" : "shiftOption",
+      "text" : "ż"
+    },
+    {
+      "keyCode" : 2,
+      "modifier" : "normal",
+      "text" : "d"
+    },
+    {
+      "keyCode" : 2,
+      "modifier" : "shift",
+      "text" : "D"
+    },
+    {
+      "keyCode" : 2,
+      "modifier" : "option",
+      "text" : "∂"
+    },
+    {
+      "keyCode" : 2,
+      "modifier" : "shiftOption",
+      "text" : "Ž"
+    },
+    {
+      "keyCode" : 3,
+      "modifier" : "normal",
+      "text" : "f"
+    },
+    {
+      "keyCode" : 3,
+      "modifier" : "shift",
+      "text" : "F"
+    },
+    {
+      "keyCode" : 3,
+      "modifier" : "option",
+      "text" : "ń"
+    },
+    {
+      "keyCode" : 3,
+      "modifier" : "shiftOption",
+      "text" : "ž"
+    },
+    {
+      "keyCode" : 4,
+      "modifier" : "normal",
+      "text" : "h"
+    },
+    {
+      "keyCode" : 4,
+      "modifier" : "shift",
+      "text" : "H"
+    },
+    {
+      "keyCode" : 4,
+      "modifier" : "option",
+      "text" : "ķ"
+    },
+    {
+      "keyCode" : 4,
+      "modifier" : "shiftOption",
+      "text" : "Õ"
+    },
+    {
+      "keyCode" : 5,
+      "modifier" : "normal",
+      "text" : "g"
+    },
+    {
+      "keyCode" : 5,
+      "modifier" : "shift",
+      "text" : "G"
+    },
+    {
+      "keyCode" : 5,
+      "modifier" : "option",
+      "text" : "©"
+    },
+    {
+      "keyCode" : 5,
+      "modifier" : "shiftOption",
+      "text" : "Ū"
+    },
+    {
+      "keyCode" : 6,
+      "modifier" : "normal",
+      "text" : "y"
+    },
+    {
+      "keyCode" : 6,
+      "modifier" : "shift",
+      "text" : "Y"
+    },
+    {
+      "keyCode" : 6,
+      "modifier" : "option",
+      "text" : "«"
+    },
+    {
+      "keyCode" : 6,
+      "modifier" : "shiftOption",
+      "text" : "<"
+    },
+    {
+      "keyCode" : 7,
+      "modifier" : "normal",
+      "text" : "x"
+    },
+    {
+      "keyCode" : 7,
+      "modifier" : "shift",
+      "text" : "X"
+    },
+    {
+      "keyCode" : 7,
+      "modifier" : "option",
+      "text" : "»"
+    },
+    {
+      "keyCode" : 7,
+      "modifier" : "shiftOption",
+      "text" : ">"
+    },
+    {
+      "keyCode" : 8,
+      "modifier" : "normal",
+      "text" : "c"
+    },
+    {
+      "keyCode" : 8,
+      "modifier" : "shift",
+      "text" : "C"
+    },
+    {
+      "keyCode" : 8,
+      "modifier" : "option",
+      "text" : "ć"
+    },
+    {
+      "keyCode" : 8,
+      "modifier" : "shiftOption",
+      "text" : "©"
+    },
+    {
+      "keyCode" : 9,
+      "modifier" : "normal",
+      "text" : "v"
+    },
+    {
+      "keyCode" : 9,
+      "modifier" : "shift",
+      "text" : "V"
+    },
+    {
+      "keyCode" : 9,
+      "modifier" : "option",
+      "text" : "„"
+    },
+    {
+      "keyCode" : 9,
+      "modifier" : "shiftOption",
+      "text" : "‚"
+    },
+    {
+      "keyCode" : 10,
+      "modifier" : "normal",
+      "text" : "0"
+    },
+    {
+      "keyCode" : 10,
+      "modifier" : "shift",
+      "text" : "§"
+    },
+    {
+      "keyCode" : 10,
+      "modifier" : "option",
+      "text" : "¬"
+    },
+    {
+      "keyCode" : 10,
+      "modifier" : "shiftOption",
+      "text" : "•"
+    },
+    {
+      "keyCode" : 11,
+      "modifier" : "normal",
+      "text" : "b"
+    },
+    {
+      "keyCode" : 11,
+      "modifier" : "shift",
+      "text" : "B"
+    },
+    {
+      "keyCode" : 11,
+      "modifier" : "option",
+      "text" : "”"
+    },
+    {
+      "keyCode" : 11,
+      "modifier" : "shiftOption",
+      "text" : "’"
+    },
+    {
+      "keyCode" : 12,
+      "modifier" : "normal",
+      "text" : "q"
+    },
+    {
+      "keyCode" : 12,
+      "modifier" : "shift",
+      "text" : "Q"
+    },
+    {
+      "keyCode" : 12,
+      "modifier" : "option",
+      "text" : "@"
+    },
+    {
+      "keyCode" : 12,
+      "modifier" : "shiftOption",
+      "text" : "ļ"
+    },
+    {
+      "keyCode" : 13,
+      "modifier" : "normal",
+      "text" : "w"
+    },
+    {
+      "keyCode" : 13,
+      "modifier" : "shift",
+      "text" : "W"
+    },
+    {
+      "keyCode" : 13,
+      "modifier" : "option",
+      "text" : "ę"
+    },
+    {
+      "keyCode" : 13,
+      "modifier" : "shiftOption",
+      "text" : "Ł"
+    },
+    {
+      "keyCode" : 14,
+      "modifier" : "normal",
+      "text" : "e"
+    },
+    {
+      "keyCode" : 14,
+      "modifier" : "shift",
+      "text" : "E"
+    },
+    {
+      "keyCode" : 14,
+      "modifier" : "option",
+      "text" : "€"
+    },
+    {
+      "keyCode" : 14,
+      "modifier" : "shiftOption",
+      "text" : "š"
+    },
+    {
+      "keyCode" : 15,
+      "modifier" : "normal",
+      "text" : "r"
+    },
+    {
+      "keyCode" : 15,
+      "modifier" : "shift",
+      "text" : "R"
+    },
+    {
+      "keyCode" : 15,
+      "modifier" : "option",
+      "text" : "¶"
+    },
+    {
+      "keyCode" : 15,
+      "modifier" : "shiftOption",
+      "text" : "®"
+    },
+    {
+      "keyCode" : 16,
+      "modifier" : "normal",
+      "text" : "z"
+    },
+    {
+      "keyCode" : 16,
+      "modifier" : "shift",
+      "text" : "Z"
+    },
+    {
+      "keyCode" : 16,
+      "modifier" : "option",
+      "text" : "ź"
+    },
+    {
+      "keyCode" : 16,
+      "modifier" : "shiftOption",
+      "text" : "Ź"
+    },
+    {
+      "keyCode" : 17,
+      "modifier" : "normal",
+      "text" : "t"
+    },
+    {
+      "keyCode" : 17,
+      "modifier" : "shift",
+      "text" : "T"
+    },
+    {
+      "keyCode" : 17,
+      "modifier" : "option",
+      "text" : "†"
+    },
+    {
+      "keyCode" : 17,
+      "modifier" : "shiftOption",
+      "text" : "ś"
+    },
+    {
+      "keyCode" : 18,
+      "modifier" : "normal",
+      "text" : "1"
+    },
+    {
+      "keyCode" : 18,
+      "modifier" : "shift",
+      "text" : "'"
+    },
+    {
+      "keyCode" : 18,
+      "modifier" : "option",
+      "text" : "&"
+    },
+    {
+      "keyCode" : 18,
+      "modifier" : "shiftOption",
+      "text" : "ŕ"
+    },
+    {
+      "keyCode" : 19,
+      "modifier" : "normal",
+      "text" : "2"
+    },
+    {
+      "keyCode" : 19,
+      "modifier" : "shift",
+      "text" : "\""
+    },
+    {
+      "keyCode" : 19,
+      "modifier" : "option",
+      "text" : "™"
+    },
+    {
+      "keyCode" : 19,
+      "modifier" : "shiftOption",
+      "text" : "Ř"
+    },
+    {
+      "keyCode" : 20,
+      "modifier" : "normal",
+      "text" : "3"
+    },
+    {
+      "keyCode" : 20,
+      "modifier" : "shift",
+      "text" : "+"
+    },
+    {
+      "keyCode" : 20,
+      "modifier" : "option",
+      "text" : "£"
+    },
+    {
+      "keyCode" : 20,
+      "modifier" : "shiftOption",
+      "text" : "#"
+    },
+    {
+      "keyCode" : 21,
+      "modifier" : "normal",
+      "text" : "4"
+    },
+    {
+      "keyCode" : 21,
+      "modifier" : "shift",
+      "text" : "!"
+    },
+    {
+      "keyCode" : 21,
+      "modifier" : "option",
+      "text" : "$"
+    },
+    {
+      "keyCode" : 21,
+      "modifier" : "shiftOption",
+      "text" : "$"
+    },
+    {
+      "keyCode" : 22,
+      "modifier" : "normal",
+      "text" : "6"
+    },
+    {
+      "keyCode" : 22,
+      "modifier" : "shift",
+      "text" : "\/"
+    },
+    {
+      "keyCode" : 22,
+      "modifier" : "option",
+      "text" : "›"
+    },
+    {
+      "keyCode" : 22,
+      "modifier" : "shiftOption",
+      "text" : "Ŗ"
+    },
+    {
+      "keyCode" : 23,
+      "modifier" : "normal",
+      "text" : "5"
+    },
+    {
+      "keyCode" : 23,
+      "modifier" : "shift",
+      "text" : "%"
+    },
+    {
+      "keyCode" : 23,
+      "modifier" : "option",
+      "text" : "‹"
+    },
+    {
+      "keyCode" : 23,
+      "modifier" : "shiftOption",
+      "text" : "ř"
+    },
+    {
+      "keyCode" : 24,
+      "modifier" : "normal",
+      "text" : "ó"
+    },
+    {
+      "keyCode" : 24,
+      "modifier" : "shift",
+      "text" : "Ó"
+    },
+    {
+      "keyCode" : 24,
+      "modifier" : "option",
+      "text" : "≠"
+    },
+    {
+      "keyCode" : 24,
+      "modifier" : "shiftOption",
+      "text" : "Ī"
+    },
+    {
+      "keyCode" : 25,
+      "modifier" : "normal",
+      "text" : "9"
+    },
+    {
+      "keyCode" : 25,
+      "modifier" : "shift",
+      "text" : ")"
+    },
+    {
+      "keyCode" : 25,
+      "modifier" : "option",
+      "text" : "]"
+    },
+    {
+      "keyCode" : 25,
+      "modifier" : "shiftOption",
+      "text" : "}"
+    },
+    {
+      "keyCode" : 26,
+      "modifier" : "normal",
+      "text" : "7"
+    },
+    {
+      "keyCode" : 26,
+      "modifier" : "shift",
+      "text" : "="
+    },
+    {
+      "keyCode" : 26,
+      "modifier" : "option",
+      "text" : "{"
+    },
+    {
+      "keyCode" : 26,
+      "modifier" : "shiftOption",
+      "text" : "ŗ"
+    },
+    {
+      "keyCode" : 27,
+      "modifier" : "normal",
+      "text" : "ü"
+    },
+    {
+      "keyCode" : 27,
+      "modifier" : "shift",
+      "text" : "Ü"
+    },
+    {
+      "keyCode" : 27,
+      "modifier" : "option",
+      "text" : "\\"
+    },
+    {
+      "keyCode" : 27,
+      "modifier" : "shiftOption",
+      "text" : "ī"
+    },
+    {
+      "keyCode" : 28,
+      "modifier" : "normal",
+      "text" : "8"
+    },
+    {
+      "keyCode" : 28,
+      "modifier" : "shift",
+      "text" : "("
+    },
+    {
+      "keyCode" : 28,
+      "modifier" : "option",
+      "text" : "["
+    },
+    {
+      "keyCode" : 28,
+      "modifier" : "shiftOption",
+      "text" : "™"
+    },
+    {
+      "keyCode" : 29,
+      "modifier" : "normal",
+      "text" : "ö"
+    },
+    {
+      "keyCode" : 29,
+      "modifier" : "shift",
+      "text" : "Ö"
+    },
+    {
+      "keyCode" : 29,
+      "modifier" : "option",
+      "text" : "}"
+    },
+    {
+      "keyCode" : 29,
+      "modifier" : "shiftOption",
+      "text" : "°"
+    },
+    {
+      "keyCode" : 30,
+      "modifier" : "normal",
+      "text" : "ú"
+    },
+    {
+      "keyCode" : 30,
+      "modifier" : "shift",
+      "text" : "Ú"
+    },
+    {
+      "keyCode" : 30,
+      "modifier" : "option",
+      "text" : "~"
+    },
+    {
+      "keyCode" : 30,
+      "modifier" : "shiftOption",
+      "text" : "ý"
+    },
+    {
+      "keyCode" : 31,
+      "modifier" : "normal",
+      "text" : "o"
+    },
+    {
+      "keyCode" : 31,
+      "modifier" : "shift",
+      "text" : "O"
+    },
+    {
+      "keyCode" : 31,
+      "modifier" : "option",
+      "text" : "Ņ"
+    },
+    {
+      "keyCode" : 31,
+      "modifier" : "shiftOption",
+      "text" : "Į"
+    },
+    {
+      "keyCode" : 32,
+      "modifier" : "normal",
+      "text" : "u"
+    },
+    {
+      "keyCode" : 32,
+      "modifier" : "shift",
+      "text" : "U"
+    },
+    {
+      "keyCode" : 32,
+      "modifier" : "option",
+      "text" : "¨"
+    },
+    {
+      "keyCode" : 32,
+      "modifier" : "shiftOption",
+      "text" : "†"
+    },
+    {
+      "keyCode" : 33,
+      "modifier" : "normal",
+      "text" : "ő"
+    },
+    {
+      "keyCode" : 33,
+      "modifier" : "shift",
+      "text" : "Ő"
+    },
+    {
+      "keyCode" : 33,
+      "modifier" : "option",
+      "text" : "¨"
+    },
+    {
+      "keyCode" : 33,
+      "modifier" : "shiftOption",
+      "text" : "Ý"
+    },
+    {
+      "keyCode" : 34,
+      "modifier" : "normal",
+      "text" : "i"
+    },
+    {
+      "keyCode" : 34,
+      "modifier" : "shift",
+      "text" : "I"
+    },
+    {
+      "keyCode" : 34,
+      "modifier" : "option",
+      "text" : "^"
+    },
+    {
+      "keyCode" : 34,
+      "modifier" : "shiftOption",
+      "text" : "ť"
+    },
+    {
+      "keyCode" : 35,
+      "modifier" : "normal",
+      "text" : "p"
+    },
+    {
+      "keyCode" : 35,
+      "modifier" : "shift",
+      "text" : "P"
+    },
+    {
+      "keyCode" : 35,
+      "modifier" : "option",
+      "text" : "Ļ"
+    },
+    {
+      "keyCode" : 35,
+      "modifier" : "shiftOption",
+      "text" : "ł"
+    },
+    {
+      "keyCode" : 36,
+      "modifier" : "normal",
+      "text" : "\r"
+    },
+    {
+      "keyCode" : 36,
+      "modifier" : "shift",
+      "text" : "\r"
+    },
+    {
+      "keyCode" : 36,
+      "modifier" : "option",
+      "text" : "\r"
+    },
+    {
+      "keyCode" : 36,
+      "modifier" : "shiftOption",
+      "text" : "\r"
+    },
+    {
+      "keyCode" : 37,
+      "modifier" : "normal",
+      "text" : "l"
+    },
+    {
+      "keyCode" : 37,
+      "modifier" : "shift",
+      "text" : "L"
+    },
+    {
+      "keyCode" : 37,
+      "modifier" : "option",
+      "text" : "•"
+    },
+    {
+      "keyCode" : 37,
+      "modifier" : "shiftOption",
+      "text" : "Ů"
+    },
+    {
+      "keyCode" : 38,
+      "modifier" : "normal",
+      "text" : "j"
+    },
+    {
+      "keyCode" : 38,
+      "modifier" : "shift",
+      "text" : "J"
+    },
+    {
+      "keyCode" : 38,
+      "modifier" : "option",
+      "text" : "∆"
+    },
+    {
+      "keyCode" : 38,
+      "modifier" : "shiftOption",
+      "text" : "Ô"
+    },
+    {
+      "keyCode" : 39,
+      "modifier" : "normal",
+      "text" : "á"
+    },
+    {
+      "keyCode" : 39,
+      "modifier" : "shift",
+      "text" : "Á"
+    },
+    {
+      "keyCode" : 39,
+      "modifier" : "option",
+      "text" : "^"
+    },
+    {
+      "keyCode" : 39,
+      "modifier" : "shiftOption",
+      "text" : "ˇ"
+    },
+    {
+      "keyCode" : 40,
+      "modifier" : "normal",
+      "text" : "k"
+    },
+    {
+      "keyCode" : 40,
+      "modifier" : "shift",
+      "text" : "K"
+    },
+    {
+      "keyCode" : 40,
+      "modifier" : "option",
+      "text" : "Ż"
+    },
+    {
+      "keyCode" : 40,
+      "modifier" : "shiftOption",
+      "text" : "&"
+    },
+    {
+      "keyCode" : 41,
+      "modifier" : "normal",
+      "text" : "é"
+    },
+    {
+      "keyCode" : 41,
+      "modifier" : "shift",
+      "text" : "É"
+    },
+    {
+      "keyCode" : 41,
+      "modifier" : "option",
+      "text" : "…"
+    },
+    {
+      "keyCode" : 41,
+      "modifier" : "shiftOption",
+      "text" : "ō"
+    },
+    {
+      "keyCode" : 42,
+      "modifier" : "normal",
+      "text" : "ű"
+    },
+    {
+      "keyCode" : 42,
+      "modifier" : "shift",
+      "text" : "Ű"
+    },
+    {
+      "keyCode" : 42,
+      "modifier" : "option",
+      "text" : "`"
+    },
+    {
+      "keyCode" : 42,
+      "modifier" : "shiftOption",
+      "text" : "Ģ"
+    },
+    {
+      "keyCode" : 43,
+      "modifier" : "normal",
+      "text" : ","
+    },
+    {
+      "keyCode" : 43,
+      "modifier" : "shift",
+      "text" : "?"
+    },
+    {
+      "keyCode" : 43,
+      "modifier" : "option",
+      "text" : "–"
+    },
+    {
+      "keyCode" : 43,
+      "modifier" : "shiftOption",
+      "text" : "*"
+    },
+    {
+      "keyCode" : 44,
+      "modifier" : "normal",
+      "text" : "-"
+    },
+    {
+      "keyCode" : 44,
+      "modifier" : "shift",
+      "text" : "_"
+    },
+    {
+      "keyCode" : 44,
+      "modifier" : "option",
+      "text" : "–"
+    },
+    {
+      "keyCode" : 44,
+      "modifier" : "shiftOption",
+      "text" : "—"
+    },
+    {
+      "keyCode" : 45,
+      "modifier" : "normal",
+      "text" : "n"
+    },
+    {
+      "keyCode" : 45,
+      "modifier" : "shift",
+      "text" : "N"
+    },
+    {
+      "keyCode" : 45,
+      "modifier" : "option",
+      "text" : "~"
+    },
+    {
+      "keyCode" : 45,
+      "modifier" : "shiftOption",
+      "text" : "Ų"
+    },
+    {
+      "keyCode" : 46,
+      "modifier" : "normal",
+      "text" : "m"
+    },
+    {
+      "keyCode" : 46,
+      "modifier" : "shift",
+      "text" : "M"
+    },
+    {
+      "keyCode" : 46,
+      "modifier" : "option",
+      "text" : "Ķ"
+    },
+    {
+      "keyCode" : 46,
+      "modifier" : "shiftOption",
+      "text" : "ų"
+    },
+    {
+      "keyCode" : 47,
+      "modifier" : "normal",
+      "text" : "."
+    },
+    {
+      "keyCode" : 47,
+      "modifier" : "shift",
+      "text" : ":"
+    },
+    {
+      "keyCode" : 47,
+      "modifier" : "option",
+      "text" : ";"
+    },
+    {
+      "keyCode" : 47,
+      "modifier" : "shiftOption",
+      "text" : "÷"
+    },
+    {
+      "keyCode" : 48,
+      "modifier" : "normal",
+      "text" : "\t"
+    },
+    {
+      "keyCode" : 48,
+      "modifier" : "shift",
+      "text" : "\t"
+    },
+    {
+      "keyCode" : 48,
+      "modifier" : "option",
+      "text" : "\t"
+    },
+    {
+      "keyCode" : 48,
+      "modifier" : "shiftOption",
+      "text" : "\t"
+    },
+    {
+      "keyCode" : 49,
+      "modifier" : "normal",
+      "text" : " "
+    },
+    {
+      "keyCode" : 49,
+      "modifier" : "shift",
+      "text" : " "
+    },
+    {
+      "keyCode" : 49,
+      "modifier" : "option",
+      "text" : " "
+    },
+    {
+      "keyCode" : 49,
+      "modifier" : "shiftOption",
+      "text" : " "
+    },
+    {
+      "keyCode" : 50,
+      "modifier" : "normal",
+      "text" : "í"
+    },
+    {
+      "keyCode" : 50,
+      "modifier" : "shift",
+      "text" : "Í"
+    },
+    {
+      "keyCode" : 50,
+      "modifier" : "option",
+      "text" : "|"
+    },
+    {
+      "keyCode" : 50,
+      "modifier" : "shiftOption",
+      "text" : "Ŕ"
+    }
+  ]
+}

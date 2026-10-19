@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>UID</key>
+		<string>88F621B2-E049-529D-90BC-466255AB80A9</string>
+		<key>Name</key>
+		<string>Convert Keyboard Layout — US ↔ Hungarian v2</string>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>IsActive</key>
+		<true/>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>UID</key>
+				<string>B30C3FBF-CF0B-5F87-A8CD-C9F730A25994</string>
+				<key>Name</key>
+				<string>I wanted to type in Hungarian (English → Hungarian)</string>
+				<key>IsActive</key>
+				<true/>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6912</integer>
+						<key>KeyCode</key>
+						<integer>35</integer>
+						<key>FireType</key>
+						<string>Pressed</string>
+					</dict>
+				</array>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>MacroActionType</key>
+						<string>Semaphore</string>
+						<key>SemaphoreAction</key>
+						<string>Lock</string>
+						<key>SemaphoreName</key>
+						<string>convert-kbd-selection</string>
+						<key>TimeOutPeriod</key>
+						<string>0.1</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>CutCopyPaste</string>
+						<key>Action</key>
+						<string>Copy</string>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>UseText</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<false/>
+						<key>Text</key>
+						<string>// Generated from macOS ABC and Hungarian layouts for an ANSI keyboard.
+var keyboardMaps = {
+  "toHungarian": {
+    "a": "a",
+    "A": "A",
+    "s": "s",
+    "S": "S",
+    "d": "d",
+    "D": "D",
+    "f": "f",
+    "F": "F",
+    "h": "h",
+    "H": "H",
+    "g": "g",
+    "G": "G",
+    "z": "y",
+    "Z": "Y",
+    "x": "x",
+    "X": "X",
+    "c": "c",
+    "C": "C",
+    "v": "v",
+    "V": "V",
+    "b": "b",
+    "B": "B",
+    "q": "q",
+    "Q": "Q",
+    "w": "w",
+    "W": "W",
+    "e": "e",
+    "E": "E",
+    "r": "r",
+    "R": "R",
+    "y": "z",
+    "Y": "Z",
+    "t": "t",
+    "T": "T",
+    "1": "1",
+    "!": "'",
+    "2": "2",
+    "@": "\"",
+    "3": "3",
+    "#": "+",
+    "4": "4",
+    "$": "!",
+    "6": "6",
+    "^": "/",
+    "5": "5",
+    "%": "%",
+    "=": "ó",
+    "+": "Ó",
+    "9": "9",
+    "(": ")",
+    "7": "7",
+    "&amp;": "=",
+    "-": "ü",
+    "_": "Ü",
+    "8": "8",
+    "*": "(",
+    "0": "ö",
+    ")": "Ö",
+    "]": "ú",
+    "}": "Ú",
+    "o": "o",
+    "O": "O",
+    "u": "u",
+    "U": "U",
+    "[": "ő",
+    "{": "Ő",
+    "i": "i",
+    "I": "I",
+    "p": "p",
+    "P": "P",
+    "\r": "\r",
+    "l": "l",
+    "L": "L",
+    "j": "j",
+    "J": "J",
+    "'": "á",
+    "\"": "Á",
+    "k": "k",
+    "K": "K",
+    ";": "é",
+    ":": "É",
+    "\\": "ű",
+    "|": "Ű",
+    ",": ",",
+    "&lt;": "?",
+    "/": "-",
+    "?": "_",
+    "n": "n",
+    "N": "N",
+    "m": "m",
+    "M": "M",
+    ".": ".",
+    "&gt;": ":",
+    "\t": "\t",
+    " ": " ",
+    "`": "í",
+    "~": "Í"
+  },
+  "toEnglish": {
+    "a": "a",
+    "A": "A",
+    "s": "s",
+    "S": "S",
+    "d": "d",
+    "D": "D",
+    "f": "f",
+    "F": "F",
+    "h": "h",
+    "H": "H",
+    "g": "g",
+    "G": "G",
+    "y": "z",
+    "Y": "Z",
+    "x": "x",
+    "X": "X",
+    "c": "c",
+    "C": "C",
+    "v": "v",
+    "V": "V",
+    "b": "b",
+    "B": "B",
+    "q": "q",
+    "Q": "Q",
+    "w": "w",
+    "W": "W",
+    "e": "e",
+    "E": "E",
+    "r": "r",
+    "R": "R",
+    "z": "y",
+    "Z": "Y",
+    "t": "t",
+    "T": "T",
+    "1": "1",
+    "'": "!",
+    "2": "2",
+    "\"": "@",
+    "3": "3",
+    "+": "#",
+    "4": "4",
+    "!": "$",
+    "6": "6",
+    "/": "^",
+    "5": "5",
+    "%": "%",
+    "ó": "=",
+    "Ó": "+",
+    "9": "9",
+    ")": "(",
+    "7": "7",
+    "=": "&amp;",
+    "ü": "-",
+    "Ü": "_",
+    "8": "8",
+    "(": "*",
+    "ö": "0",
+    "Ö": ")",
+    "ú": "]",
+    "Ú": "}",
+    "o": "o",
+    "O": "O",
+    "u": "u",
+    "U": "U",
+    "ő": "[",
+    "Ő": "{",
+    "i": "i",
+    "I": "I",
+    "p": "p",
+    "P": "P",
+    "\r": "\r",
+    "l": "l",
+    "L": "L",
+    "j": "j",
+    "J": "J",
+    "á": "'",
+    "Á": "\"",
+    "k": "k",
+    "K": "K",
+    "é": ";",
+    "É": ":",
+    "ű": "\\",
+    "Ű": "|",
+    ",": ",",
+    "?": "&lt;",
+    "-": "/",
+    "_": "?",
+    "n": "n",
+    "N": "N",
+    "m": "m",
+    "M": "M",
+    ".": ".",
+    ":": "&gt;",
+    "\t": "\t",
+    " ": " ",
+    "í": "`",
+    "Í": "~"
+  }
+};
+
+function convertKeyboardText(text, direction) {
+    var map = keyboardMaps[direction];
+    if (!map) throw new Error("Unknown conversion direction: " + direction);
+    // NFC also accepts accents stored as a base letter + combining mark.
+    return Array.from(text.normalize("NFC")).map(function (character) {
+        return Object.prototype.hasOwnProperty.call(map, character) ? map[character] : character;
+    }).join("");
+}
+
+if (typeof module !== "undefined") {
+    module.exports = { convertKeyboardText: convertKeyboardText, keyboardMaps: keyboardMaps };
+}
+
+// Embedded after convert.js in each macro. No external runtime files are needed.
+// Keyboard Maestro performs Copy and Paste natively; this action only transforms
+// the copied text on the local macOS pasteboard.
+function convertSystemClipboard(direction) {
+    ObjC.import("AppKit");
+    var pasteboard = $.NSPasteboard.generalPasteboard;
+    var value = pasteboard.stringForType($.NSPasteboardTypeString);
+    if (!value || value.isNil()) throw new Error("The selection does not contain text.");
+    var original = ObjC.unwrap(value);
+    if (!original.length) throw new Error("Select the mistyped text first.");
+    var converted = convertKeyboardText(original, direction);
+    if (converted === original) return;
+    pasteboard.clearContents;
+    if (!pasteboard.setStringForType($(converted), $.NSPasteboardTypeString)) {
+        throw new Error("Could not prepare the replacement text.");
+    }
+}
+
+convertSystemClipboard("toHungarian");
+</string>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IncludedVariables</key>
+						<array/>
+						<key>TrimResults</key>
+						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>StopOnFailure</key>
+						<true/>
+						<key>NotifyOnFailure</key>
+						<true/>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>CutCopyPaste</string>
+						<key>Action</key>
+						<string>Paste</string>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>SetClipboardToPastClipboard</string>
+						<key>PastExpression</key>
+						<string>2</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>UID</key>
+				<string>50423E3E-005C-53AB-A133-911A3A696D56</string>
+				<key>Name</key>
+				<string>I wanted to type in English (Hungarian → English)</string>
+				<key>IsActive</key>
+				<true/>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6912</integer>
+						<key>KeyCode</key>
+						<integer>31</integer>
+						<key>FireType</key>
+						<string>Pressed</string>
+					</dict>
+				</array>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>MacroActionType</key>
+						<string>Semaphore</string>
+						<key>SemaphoreAction</key>
+						<string>Lock</string>
+						<key>SemaphoreName</key>
+						<string>convert-kbd-selection</string>
+						<key>TimeOutPeriod</key>
+						<string>0.1</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>CutCopyPaste</string>
+						<key>Action</key>
+						<string>Copy</string>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>UseText</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<false/>
+						<key>Text</key>
+						<string>// Generated from macOS ABC and Hungarian layouts for an ANSI keyboard.
+var keyboardMaps = {
+  "toHungarian": {
+    "a": "a",
+    "A": "A",
+    "s": "s",
+    "S": "S",
+    "d": "d",
+    "D": "D",
+    "f": "f",
+    "F": "F",
+    "h": "h",
+    "H": "H",
+    "g": "g",
+    "G": "G",
+    "z": "y",
+    "Z": "Y",
+    "x": "x",
+    "X": "X",
+    "c": "c",
+    "C": "C",
+    "v": "v",
+    "V": "V",
+    "b": "b",
+    "B": "B",
+    "q": "q",
+    "Q": "Q",
+    "w": "w",
+    "W": "W",
+    "e": "e",
+    "E": "E",
+    "r": "r",
+    "R": "R",
+    "y": "z",
+    "Y": "Z",
+    "t": "t",
+    "T": "T",
+    "1": "1",
+    "!": "'",
+    "2": "2",
+    "@": "\"",
+    "3": "3",
+    "#": "+",
+    "4": "4",
+    "$": "!",
+    "6": "6",
+    "^": "/",
+    "5": "5",
+    "%": "%",
+    "=": "ó",
+    "+": "Ó",
+    "9": "9",
+    "(": ")",
+    "7": "7",
+    "&amp;": "=",
+    "-": "ü",
+    "_": "Ü",
+    "8": "8",
+    "*": "(",
+    "0": "ö",
+    ")": "Ö",
+    "]": "ú",
+    "}": "Ú",
+    "o": "o",
+    "O": "O",
+    "u": "u",
+    "U": "U",
+    "[": "ő",
+    "{": "Ő",
+    "i": "i",
+    "I": "I",
+    "p": "p",
+    "P": "P",
+    "\r": "\r",
+    "l": "l",
+    "L": "L",
+    "j": "j",
+    "J": "J",
+    "'": "á",
+    "\"": "Á",
+    "k": "k",
+    "K": "K",
+    ";": "é",
+    ":": "É",
+    "\\": "ű",
+    "|": "Ű",
+    ",": ",",
+    "&lt;": "?",
+    "/": "-",
+    "?": "_",
+    "n": "n",
+    "N": "N",
+    "m": "m",
+    "M": "M",
+    ".": ".",
+    "&gt;": ":",
+    "\t": "\t",
+    " ": " ",
+    "`": "í",
+    "~": "Í"
+  },
+  "toEnglish": {
+    "a": "a",
+    "A": "A",
+    "s": "s",
+    "S": "S",
+    "d": "d",
+    "D": "D",
+    "f": "f",
+    "F": "F",
+    "h": "h",
+    "H": "H",
+    "g": "g",
+    "G": "G",
+    "y": "z",
+    "Y": "Z",
+    "x": "x",
+    "X": "X",
+    "c": "c",
+    "C": "C",
+    "v": "v",
+    "V": "V",
+    "b": "b",
+    "B": "B",
+    "q": "q",
+    "Q": "Q",
+    "w": "w",
+    "W": "W",
+    "e": "e",
+    "E": "E",
+    "r": "r",
+    "R": "R",
+    "z": "y",
+    "Z": "Y",
+    "t": "t",
+    "T": "T",
+    "1": "1",
+    "'": "!",
+    "2": "2",
+    "\"": "@",
+    "3": "3",
+    "+": "#",
+    "4": "4",
+    "!": "$",
+    "6": "6",
+    "/": "^",
+    "5": "5",
+    "%": "%",
+    "ó": "=",
+    "Ó": "+",
+    "9": "9",
+    ")": "(",
+    "7": "7",
+    "=": "&amp;",
+    "ü": "-",
+    "Ü": "_",
+    "8": "8",
+    "(": "*",
+    "ö": "0",
+    "Ö": ")",
+    "ú": "]",
+    "Ú": "}",
+    "o": "o",
+    "O": "O",
+    "u": "u",
+    "U": "U",
+    "ő": "[",
+    "Ő": "{",
+    "i": "i",
+    "I": "I",
+    "p": "p",
+    "P": "P",
+    "\r": "\r",
+    "l": "l",
+    "L": "L",
+    "j": "j",
+    "J": "J",
+    "á": "'",
+    "Á": "\"",
+    "k": "k",
+    "K": "K",
+    "é": ";",
+    "É": ":",
+    "ű": "\\",
+    "Ű": "|",
+    ",": ",",
+    "?": "&lt;",
+    "-": "/",
+    "_": "?",
+    "n": "n",
+    "N": "N",
+    "m": "m",
+    "M": "M",
+    ".": ".",
+    ":": "&gt;",
+    "\t": "\t",
+    " ": " ",
+    "í": "`",
+    "Í": "~"
+  }
+};
+
+function convertKeyboardText(text, direction) {
+    var map = keyboardMaps[direction];
+    if (!map) throw new Error("Unknown conversion direction: " + direction);
+    // NFC also accepts accents stored as a base letter + combining mark.
+    return Array.from(text.normalize("NFC")).map(function (character) {
+        return Object.prototype.hasOwnProperty.call(map, character) ? map[character] : character;
+    }).join("");
+}
+
+if (typeof module !== "undefined") {
+    module.exports = { convertKeyboardText: convertKeyboardText, keyboardMaps: keyboardMaps };
+}
+
+// Embedded after convert.js in each macro. No external runtime files are needed.
+// Keyboard Maestro performs Copy and Paste natively; this action only transforms
+// the copied text on the local macOS pasteboard.
+function convertSystemClipboard(direction) {
+    ObjC.import("AppKit");
+    var pasteboard = $.NSPasteboard.generalPasteboard;
+    var value = pasteboard.stringForType($.NSPasteboardTypeString);
+    if (!value || value.isNil()) throw new Error("The selection does not contain text.");
+    var original = ObjC.unwrap(value);
+    if (!original.length) throw new Error("Select the mistyped text first.");
+    var converted = convertKeyboardText(original, direction);
+    if (converted === original) return;
+    pasteboard.clearContents;
+    if (!pasteboard.setStringForType($(converted), $.NSPasteboardTypeString)) {
+        throw new Error("Could not prepare the replacement text.");
+    }
+}
+
+convertSystemClipboard("toEnglish");
+</string>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>IncludedVariables</key>
+						<array/>
+						<key>TrimResults</key>
+						<false/>
+						<key>TrimResultsNew</key>
+						<false/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>StopOnFailure</key>
+						<true/>
+						<key>NotifyOnFailure</key>
+						<true/>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>CutCopyPaste</string>
+						<key>Action</key>
+						<string>Paste</string>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>SetClipboardToPastClipboard</string>
+						<key>PastExpression</key>
+						<string>2</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
