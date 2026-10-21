@@ -7,6 +7,7 @@ const {
     restoreHungarianWord,
     restoreHungarianAccents
 } = require('../src/restore-accents');
+const hungarianFrequency = require('../src/hungarian-frequency');
 
 assert.equal(convert('K-l0nv;lem;nz', 'toHungarian'), 'Különvélemény');
 assert.equal(convert('Különvélemény', 'toEnglish'), 'K-l0nv;lem;nz');
@@ -53,6 +54,18 @@ assert.equal(
 assert.equal(
     restoreHungarianAccents('ARVIZTURO TUKORFUROGEP', isCorrectHungarian),
     'ÁRVÍZTŰRŐ TÜKÖRFÚRÓGÉP'
+);
+const ambiguousWords = new Set(['húsevő', 'hűsevő', 'ragadozok', 'ragadozók', 'ragadózok', 'ragadózók']);
+assert.equal(restoreHungarianWord('husevo', word => ambiguousWords.has(word), hungarianFrequency), 'húsevő');
+assert.equal(restoreHungarianWord('ragadozok', word => ambiguousWords.has(word), hungarianFrequency), 'ragadozók');
+const rareAmbiguousWords = new Set(['fajához', 'fájához']);
+assert.equal(
+    restoreHungarianWord('fajahoz', word => rareAmbiguousWords.has(word), hungarianFrequency, () => 'fajához'),
+    'fajához'
+);
+assert.equal(
+    restoreHungarianWord('faj', word => new Set(['faj', 'fáj']).has(word), hungarianFrequency),
+    'faj'
 );
 
 console.log(`Passed layout conversion, Unicode, ${checked} native key/modifier pairs, and conservative Hungarian accent restoration.`);

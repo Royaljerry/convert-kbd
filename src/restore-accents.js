@@ -21,6 +21,13 @@ var KNOWN_HUNGARIAN_PHRASES = {
     "arvizturo tukorfurogep": "árvíztűrő tükörfúrógép"
 };
 
+// These equally valid candidates are common words whose frequency is too low
+// for the bundled list to distinguish them. They are checked against macOS's
+// spelling dictionary before use.
+var PREFERRED_ACCENTED_FORMS = {
+    "macskafelek": "macskafélék"
+};
+
 var MAX_ACCENT_VARIANTS = 4096;
 var HUNGARIAN_LANGUAGE = "hu";
 // NSNotFound is wider than JavaScript's safe-integer range, so compare its
@@ -58,14 +65,57 @@ function isHungarianLetter(character) {
     return /^[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű]$/.test(character);
 }
 
-function restoreHungarianWord(word, isCorrect) {
+function frequencyFor(candidate, wordFrequency) {
+    return (wordFrequency[candidate.toLowerCase()] || 0);
+}
+
+function highestFrequencyCandidate(candidates, wordFrequency) {
+    var best = [];
+    var highest = 0;
+    candidates.forEach(function (candidate) {
+        var frequency = frequencyFor(candidate, wordFrequency);
+        if (frequency > highest) {
+            highest = frequency;
+            best = [candidate];
+        } else if (frequency === highest) {
+            best.push(candidate);
+        }
+    });
+    return highest > 0 && best.length === 1 ? best[0] : null;
+}
+
+function matchingCandidate(candidates, preferred) {
+    var lowerPreferred = preferred.toLowerCase();
+    for (var index = 0; index < candidates.length; index++) {
+        if (candidates[index].toLowerCase() === lowerPreferred) return candidates[index];
+    }
+    return null;
+}
+
+function restoreHungarianWord(word, isCorrect, wordFrequency, onlineSuggestion) {
     // Do not touch already accented words, identifiers, or words whose search
     // space is too large to evaluate promptly inside Keyboard Maestro.
     if (!/^[A-Za-z]+$/.test(word) || !/[aeiouAEIOU]/.test(word)) return word;
 
     var candidates = accentVariants(word).filter(isCorrect);
+    wordFrequency = wordFrequency || {};
 
-    return candidates.length === 1 ? candidates[0] : word;
+    if (candidates.length === 1) return candidates[0];
+    var preferred = matchingCandidate(candidates, PREFERRED_ACCENTED_FORMS[word.toLowerCase()] || "");
+    if (preferred) return preferred;
+    // A frequent, already-valid unaccented word (for example "faj") should
+    // not be overwritten by a more frequent but differently meant homograph
+    // ("fáj") without sentence-level linguistic analysis.
+    if (word.length >= 3 && candidates.indexOf(word) !== -1 && frequencyFor(word, wordFrequency) >= 1000) return word;
+    // macOS may accept multiple valid words with the same unaccented spelling
+    // (e.g. húsevő/hűsevő). The bundled frequency data breaks that tie without
+    // an AI model or any network request. A tied or unknown score remains safe.
+    var localChoice = highestFrequencyCandidate(candidates, wordFrequency);
+    if (localChoice) return localChoice;
+    if (!onlineSuggestion || !candidates.length) return word;
+
+    var suggested = onlineSuggestion(word);
+    return matchingCandidate(candidates, suggested || "") || word;
 }
 
 function preservePhraseCapitalization(source, replacement) {
@@ -86,13 +136,13 @@ function restoreKnownHungarianPhrases(text) {
     return text;
 }
 
-function restoreHungarianAccents(text, isCorrect) {
+function restoreHungarianAccents(text, isCorrect, wordFrequency, onlineSuggestion) {
     text = restoreKnownHungarianPhrases(text.normalize("NFC"));
     var result = "";
     var word = "";
 
     function appendWord() {
-        if (word) result += restoreHungarianWord(word, isCorrect);
+        if (word) result += restoreHungarianWord(word, isCorrect, wordFrequency, onlineSuggestion);
         word = "";
     }
 
@@ -122,6 +172,30 @@ function macOSRecognisesHungarianWord(checker, word) {
     return String(range.location) === NOT_FOUND_RANGE;
 }
 
+function createOfficialSuggestionLookup() {
+    var cache = {};
+    var lookups = 0;
+    var maximumLookups = 30;
+    return function (word) {
+        if (Object.prototype.hasOwnProperty.call(cache, word)) return cache[word];
+        if (lookups >= maximumLookups) return null;
+        lookups++;
+        try {
+            ObjC.import("Foundation");
+            var url = "https://www.helyesiras.mta.hu/helyesiras/default/suggest?q=" + encodeURIComponent(word);
+            var error = Ref();
+            var page = $.NSString.stringWithContentsOfURLEncodingError(
+                $.NSURL.URLWithString($(url)), $.NSUTF8StringEncoding, error
+            );
+            if (!page || page.isNil()) return (cache[word] = null);
+            var match = ObjC.unwrap(page).match(/<span class="suggest_list">([^<]+)<\/span>/);
+            return (cache[word] = match ? match[1].split(",")[0].trim() : null);
+        } catch (exception) {
+            return (cache[word] = null);
+        }
+    };
+}
+
 function restoreHungarianAccentsOnSystemClipboard() {
     ObjC.import("AppKit");
     var checker = $.NSSpellChecker.sharedSpellChecker;
@@ -135,9 +209,10 @@ function restoreHungarianAccentsOnSystemClipboard() {
     var original = ObjC.unwrap(value);
     if (!original.length) throw new Error("Select the unaccented Hungarian text first.");
 
+    var officialSuggestion = createOfficialSuggestionLookup();
     var corrected = restoreHungarianAccents(original, function (word) {
         return macOSRecognisesHungarianWord(checker, word);
-    });
+    }, HUNGARIAN_WORD_FREQUENCY, officialSuggestion);
     if (corrected === original) return;
 
     pasteboard.clearContents;
@@ -151,6 +226,7 @@ if (typeof module !== "undefined") {
         accentVariants: accentVariants,
         restoreHungarianWord: restoreHungarianWord,
         restoreHungarianAccents: restoreHungarianAccents,
-        restoreKnownHungarianPhrases: restoreKnownHungarianPhrases
+        restoreKnownHungarianPhrases: restoreKnownHungarianPhrases,
+        createOfficialSuggestionLookup: createOfficialSuggestionLookup
     };
 }

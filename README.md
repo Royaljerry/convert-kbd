@@ -11,7 +11,11 @@ AI service.
 
 ## Install and use
 
-1. Import `dist/text-transformations-macros.kmlibrary` into Keyboard Maestro.
+1. For all three actions, import `dist/text-transformations-macros.kmlibrary`
+   into Keyboard Maestro. If you have already imported an earlier version and
+   do not see **Restore Hungarian accents**, import the standalone
+   `dist/restore-hungarian-accents.kmmacros` instead—it has its own macro group
+   and cannot be merged into the older two-action group.
 2. Enable the **✑ Text Transformations** group if Keyboard Maestro imports it
    disabled. Assign your preferred global shortcuts in Keyboard Maestro, or use
    the group's Macro Palette.
@@ -32,25 +36,32 @@ in the normal case.
 ## Restore missing Hungarian accents
 
 **Restore Hungarian accents** is entirely local: it uses the built-in macOS
-Hungarian spelling dictionary (`NSSpellChecker`), not an AI model or an online
-service. For each ASCII-only word, it generates the possible Hungarian vowel
-forms (`a/á`, `e/é`, `i/í`, `o/ó/ö/ő`, `u/ú/ü/ű`) and accepts a replacement only
-when the macOS dictionary recognises exactly one valid spelling. This covers
-inflected words and recognised compounds, including the example above.
+Hungarian spelling dictionary (`NSSpellChecker`) and a bundled Hungarian word
+frequency table, not an AI model. For each ASCII-only word, it generates the
+possible Hungarian vowel forms (`a/á`, `e/é`, `i/í`, `o/ó/ö/ő`, `u/ú/ü/ű`),
+retains dictionary-valid candidates, and selects the single most frequent one
+when there is a clear corpus-frequency winner. This covers inflected words and
+recognised compounds, including the example above.
+
+For unresolved dictionary ties, the action can query the official
+`helyesiras.mta.hu` word checker for up to 30 individual ASCII words per run.
+Only that individual word is sent; the surrounding text is not. If the service
+is unavailable, the action remains local and leaves that word unchanged.
 
 The familiar `árvíztűrő tükörfúrógép` pangram is also included as a fixed
 phrase. Its first word has two dictionary-valid spellings (`árvíztúró` and
 `árvíztűrő`), so this explicit, deterministic phrase entry supplies the intended
 form before individual-word checking begins.
 
-It deliberately leaves ambiguous words alone. For example, `meg` can mean
-`meg` or `még`, and `kor` can mean `kor` or `kór`; automatically choosing one
-would be unsafe. It also leaves unknown words, identifiers, URLs, already
-accented words, and words with more than 4,096 possible vowel variants unchanged.
+It deliberately leaves ties and unknown candidates alone. It also leaves
+identifiers, URLs, already accented words, and words with more than 4,096
+possible vowel variants unchanged. The bundled frequency data is credited in
+[`NOTICE`](NOTICE).
 
 macOS normally includes the Hungarian dictionary. If the action reports that it
 is unavailable, add **Hungarian** under **System Settings → Keyboard → Text
-Input** and retry. The selected text never leaves the Mac.
+Input** and retry. Apart from the individual fallback lookups described above,
+the selected text never leaves the Mac.
 
 ## Character handling
 

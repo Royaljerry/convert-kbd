@@ -52,7 +52,10 @@ def build():
     converter_source = "\n".join(
         (ROOT / "src" / name).read_text() for name in ["convert.js", "replace-selection.js"]
     )
-    restore_source = (ROOT / "src" / "restore-accents.js").read_text()
+    restore_source = "\n".join(
+        (ROOT / "src" / name).read_text()
+        for name in ["hungarian-frequency.js", "restore-accents.js"]
+    )
     macros = [
         macro(
             "I wanted to type in Hungarian (English → Hungarian)",
@@ -104,6 +107,32 @@ def build():
     output.parent.mkdir(exist_ok=True)
     output.write_bytes(plistlib.dumps(library, sort_keys=False))
     print(output)
+
+    # A distinct import is provided for users who already imported an earlier
+    # version of the library. Keyboard Maestro does not reliably merge new
+    # macros into an existing library group with the same UID.
+    standalone_group = {
+        "UID": uid("restoreHungarianAccentsV2Group"),
+        "Name": "Restore Hungarian accents (dictionary-assisted)",
+        "Activate": "Normal",
+        "IsActive": True,
+        "Macros": [
+            {
+                "UID": uid("restoreHungarianAccentsV2Standalone"),
+                "Name": "Restore Hungarian accents (no accents → accents)",
+                "IsActive": True,
+                "Triggers": [],
+                "Actions": clipboard_actions(
+                    13644, restore_source,
+                    "restoreHungarianAccentsOnSystemClipboard",
+                    "restore-hungarian-accents-selection",
+                ),
+            }
+        ],
+    }
+    standalone_output = ROOT / "dist" / "restore-hungarian-accents.kmmacros"
+    standalone_output.write_bytes(plistlib.dumps([standalone_group], sort_keys=False))
+    print(standalone_output)
 
 
 if __name__ == "__main__":

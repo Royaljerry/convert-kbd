@@ -1,0 +1,11 @@
+Hungarian word-frequency data
+============================
+
+`src/hungarian-frequency.js` is generated from the 2016 Hungarian 50k word
+frequency list in https://github.com/hermitdave/FrequencyWords.
+
+Copyright (c) 2016 Hermit Dave
+
+The source data is distributed under the MIT License. Its copyright notice and
+license text are available at the source URL above. The table is used only to
+rank already dictionary-valid Hungarian accent-restoration candidates.
