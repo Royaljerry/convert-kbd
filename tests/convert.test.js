@@ -2,6 +2,11 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { convertKeyboardText: convert, keyboardMaps } = require('../src/convert');
+const {
+    accentVariants,
+    restoreHungarianWord,
+    restoreHungarianAccents
+} = require('../src/restore-accents');
 
 assert.equal(convert('K-l0nv;lem;nz', 'toHungarian'), 'Különvélemény');
 assert.equal(convert('Különvélemény', 'toEnglish'), 'K-l0nv;lem;nz');
@@ -32,4 +37,22 @@ for (const row of layouts['com.apple.keylayout.ABC']) {
 for (const c of Object.keys(keyboardMaps.toHungarian)) {
     assert.equal(convert(convert(c, 'toHungarian'), 'toEnglish'), c);
 }
-console.log(`Passed examples, all nine accented letter cases, punctuation, whitespace, Unicode, and ${checked} native key/modifier pairs in both directions.`);
+
+const acceptedWords = new Set(['Árvíztűrő', 'tükörfúrógép', 'KÖR', 'még', 'kór', 'meg', 'kor']);
+const isCorrectHungarian = word => acceptedWords.has(word);
+assert.ok(accentVariants('turo').includes('tűrő'));
+assert.equal(restoreHungarianWord('Arvizturo', isCorrectHungarian), 'Árvíztűrő');
+assert.equal(restoreHungarianWord('tukorfurogep', isCorrectHungarian), 'tükörfúrógép');
+assert.equal(restoreHungarianWord('KOR', isCorrectHungarian), 'KÖR');
+assert.equal(restoreHungarianWord('meg', isCorrectHungarian), 'meg');
+assert.equal(restoreHungarianWord('function_name', isCorrectHungarian), 'function_name');
+assert.equal(
+    restoreHungarianAccents('Arvizturo tukorfurogep, meg kor.', isCorrectHungarian),
+    'Árvíztűrő tükörfúrógép, meg kor.'
+);
+assert.equal(
+    restoreHungarianAccents('ARVIZTURO TUKORFUROGEP', isCorrectHungarian),
+    'ÁRVÍZTŰRŐ TÜKÖRFÚRÓGÉP'
+);
+
+console.log(`Passed layout conversion, Unicode, ${checked} native key/modifier pairs, and conservative Hungarian accent restoration.`);

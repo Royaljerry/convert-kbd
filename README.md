@@ -1,21 +1,22 @@
-# Convert keyboard layout
+# Text transformations for Hungarian typing
 
-Two Keyboard Maestro macros repair selected text typed with the wrong keyboard
-layout on a US ANSI Mac keyboard.
+Three Keyboard Maestro actions repair selected Hungarian text without calling an
+AI service.
 
-| Shortcut | Intended language | Conversion |
+| Action | Purpose | Example |
 | --- | --- | --- |
-| Control–Option–Shift–Command–P | Hungarian | `K-l0nv;lem;nz` → `Különvélemény` |
-| Control–Option–Shift–Command–O | English | `Különvélemény` → `K-l0nv;lem;nz` |
+| I wanted to type in Hungarian | Correct text typed with the US layout | `K-l0nv;lem;nz` → `Különvélemény` |
+| I wanted to type in English | Correct text typed with the Hungarian layout | `Különvélemény` → `K-l0nv;lem;nz` |
+| Restore Hungarian accents | Restore missing Hungarian vowel accents conservatively | `Arvizturo tukorfurogep` → `Árvíztűrő tükörfúrógép` |
 
 ## Install and use
 
-1. Import `dist/Convert Keyboard Layout v2.kmmacros` into Keyboard Maestro using
-   **File → Import → Import Macros…**.
-2. Enable the **Convert Keyboard Layout — US ↔ Hungarian v2** group and both macros
-   if Keyboard Maestro imports them disabled.
-3. Select the mistyped text in an editable field, press the appropriate shortcut,
-   and release the keys. The corrected plain text replaces the selection.
+1. Import `dist/text-transformations-macros.kmlibrary` into Keyboard Maestro.
+2. Enable the **✑ Text Transformations** group if Keyboard Maestro imports it
+   disabled. Assign your preferred global shortcuts in Keyboard Maestro, or use
+   the group's Macro Palette.
+3. Select text in an editable field and run the appropriate action. The corrected
+   plain text replaces the selection.
 
 Keyboard Maestro Engine must be running and have the macOS Accessibility
 permission needed to send keystrokes. Keyboard Maestro performs Copy and Paste;
@@ -24,9 +25,32 @@ local pasteboard API. No Terminal window, Node installation, Python installation
 or files from this repository are required after importing the macros.
 
 The current input source does not determine conversion direction and is not
-changed. Either shortcut works with either layout currently selected. The macros
-serialize access to the clipboard. They restore the preceding clipboard-history
-item after pasting, preserving the existing clipboard in the normal case.
+changed. The actions serialize access to the clipboard. They restore the
+preceding clipboard-history item after pasting, preserving the existing clipboard
+in the normal case.
+
+## Restore missing Hungarian accents
+
+**Restore Hungarian accents** is entirely local: it uses the built-in macOS
+Hungarian spelling dictionary (`NSSpellChecker`), not an AI model or an online
+service. For each ASCII-only word, it generates the possible Hungarian vowel
+forms (`a/á`, `e/é`, `i/í`, `o/ó/ö/ő`, `u/ú/ü/ű`) and accepts a replacement only
+when the macOS dictionary recognises exactly one valid spelling. This covers
+inflected words and recognised compounds, including the example above.
+
+The familiar `árvíztűrő tükörfúrógép` pangram is also included as a fixed
+phrase. Its first word has two dictionary-valid spellings (`árvíztúró` and
+`árvíztűrő`), so this explicit, deterministic phrase entry supplies the intended
+form before individual-word checking begins.
+
+It deliberately leaves ambiguous words alone. For example, `meg` can mean
+`meg` or `még`, and `kor` can mean `kor` or `kór`; automatically choosing one
+would be unsafe. It also leaves unknown words, identifiers, URLs, already
+accented words, and words with more than 4,096 possible vowel variants unchanged.
+
+macOS normally includes the Hungarian dictionary. If the action reports that it
+is unavailable, add **Hungarian** under **System Settings → Keyboard → Text
+Input** and retry. The selected text never leaves the Mac.
 
 ## Character handling
 
@@ -67,26 +91,20 @@ The native Copy action waits for the clipboard to change. If nothing usable is
 selected, it times out and the macro stops. Some nonstandard editors may copy a
 whole line when nothing is selected, so always make the text selection first.
 
-## Replacing the earlier build
-
-The `v2` macros avoid the macOS `System Events` call that could produce an
-AppleEvent timeout. Disable the earlier **Convert Keyboard Layout — US ↔
-Hungarian** group before enabling v2, because the shortcuts are identical.
-After the v2 macros work in a text editor, delete the earlier group.
-
 ## Development
 
 ```sh
 node tests/convert.test.js
 python3 tools/build.py
-plutil -lint 'dist/Convert Keyboard Layout v2.kmmacros'
+plutil -lint 'dist/text-transformations-macros.kmlibrary'
 ```
 
 `src/convert.js` contains the conversion tables and pure converter;
-`src/replace-selection.js` transforms the copied system clipboard. Keyboard
-Maestro's native actions handle selection copy, replacement paste, and clipboard
-restoration. The build embeds both into each macro, so the import is
-self-contained.
+`src/replace-selection.js` transforms the copied system clipboard; and
+`src/restore-accents.js` contains the deterministic accent-restoration logic.
+Keyboard Maestro's native actions handle selection copy, replacement paste, and
+clipboard restoration. The build embeds all runtime JavaScript into the library,
+so the import is self-contained.
 
 `src/layouts.json` records the native layout data used to validate every supported
 key/modifier pair. To inspect the currently installed layouts again:

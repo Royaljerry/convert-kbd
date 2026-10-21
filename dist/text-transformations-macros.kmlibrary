@@ -13,23 +13,54 @@
 	<key>Category2</key>
 	<string></string>
 	<key>Description</key>
-	<string></string>
+	<string>Offline Hungarian keyboard-layout conversion and conservative accent restoration.</string>
 	<key>Items</key>
 	<array>
 		<dict>
+			<key>UID</key>
+			<string>DD1F4A60-FDFB-4420-ABCE-F772FE06B48E</string>
+			<key>Name</key>
+			<string>✑ Text Transformations</string>
 			<key>Activate</key>
 			<string>OnceWithPalette</string>
+			<key>IsActive</key>
+			<true/>
 			<key>AddToMacroPalette</key>
 			<false/>
 			<key>AddToStatusMenu</key>
 			<false/>
-			<key>CreationDate</key>
-			<real>814313320.09207797</real>
+			<key>CanDragToMacroGroup</key>
+			<false/>
 			<key>KeyCode</key>
 			<integer>7</integer>
+			<key>Modifiers</key>
+			<integer>6400</integer>
+			<key>PaletteUnderMouse</key>
+			<false/>
+			<key>ToggleMacroUID</key>
+			<string>180F7A77-048A-46C1-8E2B-343A67981FD6</string>
 			<key>Macros</key>
 			<array>
 				<dict>
+					<key>UID</key>
+					<string>B30C3FBF-CF0B-5F87-A8CD-C9F730A25994</string>
+					<key>Name</key>
+					<string>I wanted to type in Hungarian (English → Hungarian)</string>
+					<key>IsActive</key>
+					<true/>
+					<key>Triggers</key>
+					<array>
+						<dict>
+							<key>MacroTriggerType</key>
+							<string>HotKey</string>
+							<key>Modifiers</key>
+							<integer>0</integer>
+							<key>KeyCode</key>
+							<integer>4</integer>
+							<key>FireType</key>
+							<string>Pressed</string>
+						</dict>
+					</array>
 					<key>Actions</key>
 					<array>
 						<dict>
@@ -41,34 +72,32 @@
 							<string>Lock</string>
 							<key>SemaphoreName</key>
 							<string>convert-kbd-selection</string>
+							<key>TimeOutPeriod</key>
+							<string>0.1</string>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
 						<dict>
-							<key>Action</key>
-							<string>Copy</string>
 							<key>ActionUID</key>
 							<integer>13630</integer>
-							<key>IsDisclosed</key>
-							<false/>
 							<key>MacroActionType</key>
 							<string>CutCopyPaste</string>
+							<key>Action</key>
+							<string>Copy</string>
+							<key>IsDisclosed</key>
+							<false/>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
 						<dict>
 							<key>ActionUID</key>
 							<integer>13631</integer>
-							<key>DisplayKind</key>
-							<string>None</string>
-							<key>HonourFailureSettings</key>
-							<true/>
-							<key>IncludeStdErr</key>
-							<false/>
-							<key>IncludedVariables</key>
-							<array/>
 							<key>MacroActionType</key>
 							<string>ExecuteJavaScriptForAutomation</string>
+							<key>UseText</key>
+							<true/>
+							<key>UseModernSyntax</key>
+							<false/>
 							<key>Path</key>
 							<string></string>
 							<key>Text</key>
@@ -305,28 +334,36 @@ function convertSystemClipboard(direction) {
     }
 }
 
-convertSystemClipboard("toHungarian");
+convertSystemClipboard("toHungarian")();
 </string>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
+							<key>DisplayKind</key>
+							<string>None</string>
+							<key>IncludedVariables</key>
+							<array/>
 							<key>TrimResults</key>
 							<false/>
 							<key>TrimResultsNew</key>
 							<false/>
-							<key>UseModernSyntax</key>
+							<key>IncludeStdErr</key>
 							<false/>
-							<key>UseText</key>
+							<key>StopOnFailure</key>
+							<true/>
+							<key>NotifyOnFailure</key>
+							<true/>
+							<key>HonourFailureSettings</key>
+							<true/>
+							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
 						<dict>
-							<key>Action</key>
-							<string>Paste</string>
 							<key>ActionUID</key>
 							<integer>13632</integer>
-							<key>IsDisclosed</key>
-							<false/>
 							<key>MacroActionType</key>
 							<string>CutCopyPaste</string>
+							<key>Action</key>
+							<string>Paste</string>
+							<key>IsDisclosed</key>
+							<false/>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
@@ -339,54 +376,27 @@ convertSystemClipboard("toHungarian");
 							<string>2</string>
 						</dict>
 					</array>
-					<key>CreationDate</key>
-					<real>814132836.22785902</real>
-					<key>ModificationDate</key>
-					<real>814313654.68692195</real>
+				</dict>
+				<dict>
+					<key>UID</key>
+					<string>50423E3E-005C-53AB-A133-911A3A696D56</string>
 					<key>Name</key>
-					<string>I wanted to type in Hungarian (English → Hungarian)</string>
+					<string>I wanted to type in English (Hungarian → English)</string>
+					<key>IsActive</key>
+					<true/>
 					<key>Triggers</key>
 					<array>
 						<dict>
-							<key>FireType</key>
-							<string>Pressed</string>
-							<key>KeyCode</key>
-							<integer>4</integer>
 							<key>MacroTriggerType</key>
 							<string>HotKey</string>
 							<key>Modifiers</key>
 							<integer>0</integer>
+							<key>KeyCode</key>
+							<integer>14</integer>
+							<key>FireType</key>
+							<string>Pressed</string>
 						</dict>
 					</array>
-					<key>UID</key>
-					<string>B30C3FBF-CF0B-5F87-A8CD-C9F730A25994</string>
-				</dict>
-			</array>
-			<key>Modifiers</key>
-			<integer>6400</integer>
-			<key>Name</key>
-			<string>✑ Text Transformations</string>
-			<key>PaletteUnderMouse</key>
-			<false/>
-			<key>ToggleMacroUID</key>
-			<string>180F7A77-048A-46C1-8E2B-343A67981FD6</string>
-			<key>UID</key>
-			<string>DD1F4A60-FDFB-4420-ABCE-F772FE06B48E</string>
-		</dict>
-		<dict>
-			<key>Activate</key>
-			<string>OnceWithPalette</string>
-			<key>AddToMacroPalette</key>
-			<false/>
-			<key>AddToStatusMenu</key>
-			<false/>
-			<key>CreationDate</key>
-			<real>814313320.09207797</real>
-			<key>KeyCode</key>
-			<integer>7</integer>
-			<key>Macros</key>
-			<array>
-				<dict>
 					<key>Actions</key>
 					<array>
 						<dict>
@@ -398,34 +408,32 @@ convertSystemClipboard("toHungarian");
 							<string>Lock</string>
 							<key>SemaphoreName</key>
 							<string>convert-kbd-selection</string>
+							<key>TimeOutPeriod</key>
+							<string>0.1</string>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
 						<dict>
-							<key>Action</key>
-							<string>Copy</string>
 							<key>ActionUID</key>
 							<integer>13635</integer>
-							<key>IsDisclosed</key>
-							<false/>
 							<key>MacroActionType</key>
 							<string>CutCopyPaste</string>
+							<key>Action</key>
+							<string>Copy</string>
+							<key>IsDisclosed</key>
+							<false/>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
 						<dict>
 							<key>ActionUID</key>
 							<integer>13636</integer>
-							<key>DisplayKind</key>
-							<string>None</string>
-							<key>HonourFailureSettings</key>
-							<true/>
-							<key>IncludeStdErr</key>
-							<false/>
-							<key>IncludedVariables</key>
-							<array/>
 							<key>MacroActionType</key>
 							<string>ExecuteJavaScriptForAutomation</string>
+							<key>UseText</key>
+							<true/>
+							<key>UseModernSyntax</key>
+							<false/>
 							<key>Path</key>
 							<string></string>
 							<key>Text</key>
@@ -662,28 +670,36 @@ function convertSystemClipboard(direction) {
     }
 }
 
-convertSystemClipboard("toEnglish");
+convertSystemClipboard("toEnglish")();
 </string>
-							<key>TimeOutAbortsMacro</key>
-							<true/>
+							<key>DisplayKind</key>
+							<string>None</string>
+							<key>IncludedVariables</key>
+							<array/>
 							<key>TrimResults</key>
 							<false/>
 							<key>TrimResultsNew</key>
 							<false/>
-							<key>UseModernSyntax</key>
+							<key>IncludeStdErr</key>
 							<false/>
-							<key>UseText</key>
+							<key>StopOnFailure</key>
+							<true/>
+							<key>NotifyOnFailure</key>
+							<true/>
+							<key>HonourFailureSettings</key>
+							<true/>
+							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
 						<dict>
-							<key>Action</key>
-							<string>Paste</string>
 							<key>ActionUID</key>
 							<integer>13637</integer>
-							<key>IsDisclosed</key>
-							<false/>
 							<key>MacroActionType</key>
 							<string>CutCopyPaste</string>
+							<key>Action</key>
+							<string>Paste</string>
+							<key>IsDisclosed</key>
+							<false/>
 							<key>TimeOutAbortsMacro</key>
 							<true/>
 						</dict>
@@ -696,39 +712,268 @@ convertSystemClipboard("toEnglish");
 							<string>2</string>
 						</dict>
 					</array>
-					<key>CreationDate</key>
-					<real>814132836.22785795</real>
-					<key>ModificationDate</key>
-					<real>814313641.23297596</real>
+				</dict>
+				<dict>
+					<key>UID</key>
+					<string>6FFBDA3E-298B-5542-9055-30ABA59F909D</string>
 					<key>Name</key>
-					<string>I wanted to type in English (Hungarian → English)</string>
+					<string>Restore Hungarian accents (no accents → accents)</string>
+					<key>IsActive</key>
+					<true/>
 					<key>Triggers</key>
 					<array>
 						<dict>
-							<key>FireType</key>
-							<string>Pressed</string>
-							<key>KeyCode</key>
-							<integer>14</integer>
 							<key>MacroTriggerType</key>
 							<string>HotKey</string>
 							<key>Modifiers</key>
 							<integer>0</integer>
+							<key>KeyCode</key>
+							<integer>0</integer>
+							<key>FireType</key>
+							<string>Pressed</string>
 						</dict>
 					</array>
-					<key>UID</key>
-					<string>50423E3E-005C-53AB-A133-911A3A696D56</string>
+					<key>Actions</key>
+					<array>
+						<dict>
+							<key>ActionUID</key>
+							<integer>13639</integer>
+							<key>MacroActionType</key>
+							<string>Semaphore</string>
+							<key>SemaphoreAction</key>
+							<string>Lock</string>
+							<key>SemaphoreName</key>
+							<string>restore-hungarian-accents-selection</string>
+							<key>TimeOutPeriod</key>
+							<string>0.1</string>
+							<key>TimeOutAbortsMacro</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>ActionUID</key>
+							<integer>13640</integer>
+							<key>MacroActionType</key>
+							<string>CutCopyPaste</string>
+							<key>Action</key>
+							<string>Copy</string>
+							<key>IsDisclosed</key>
+							<false/>
+							<key>TimeOutAbortsMacro</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>ActionUID</key>
+							<integer>13641</integer>
+							<key>MacroActionType</key>
+							<string>ExecuteJavaScriptForAutomation</string>
+							<key>UseText</key>
+							<true/>
+							<key>UseModernSyntax</key>
+							<false/>
+							<key>Path</key>
+							<string></string>
+							<key>Text</key>
+							<string>// Restore missing Hungarian accents without calling an AI or a network service.
+//
+// The macOS Hungarian spelling dictionary is the authority: candidates are
+// generated only by substituting the Hungarian vowel forms and are accepted
+// only when NSSpellChecker recognises the complete word. A word changes only
+// when exactly one accented spelling is valid, so ambiguous words such as
+// "meg" (meg/még) are deliberately left untouched.
+
+var HUNGARIAN_VOWELS = {
+    "a": ["a", "á"],
+    "e": ["e", "é"],
+    "i": ["i", "í"],
+    "o": ["o", "ó", "ö", "ő"],
+    "u": ["u", "ú", "ü", "ű"]
+};
+
+// A small phrase lexicon handles fixed expressions whose component words are
+// valid in more than one accented form. More entries can be added without
+// changing the algorithm or introducing an external service.
+var KNOWN_HUNGARIAN_PHRASES = {
+    "arvizturo tukorfurogep": "árvíztűrő tükörfúrógép"
+};
+
+var MAX_ACCENT_VARIANTS = 4096;
+var HUNGARIAN_LANGUAGE = "hu";
+// NSNotFound is wider than JavaScript's safe-integer range, so compare its
+// bridged string representation rather than a lossy JavaScript number.
+var NOT_FOUND_RANGE = "9223372036854775807";
+
+function accentOptions(character) {
+    var options = HUNGARIAN_VOWELS[character.toLowerCase()];
+    if (!options) return [character];
+    if (character === character.toUpperCase() &amp;&amp; character !== character.toLowerCase()) {
+        return options.map(function (option) { return option.toUpperCase(); });
+    }
+    return options;
+}
+
+function countAccentVariants(word) {
+    return Array.from(word).reduce(function (count, character) {
+        return count * accentOptions(character).length;
+    }, 1);
+}
+
+function accentVariants(word) {
+    if (countAccentVariants(word) &gt; MAX_ACCENT_VARIANTS) return [];
+    return Array.from(word).reduce(function (variants, character) {
+        var options = accentOptions(character);
+        var expanded = [];
+        variants.forEach(function (prefix) {
+            options.forEach(function (option) { expanded.push(prefix + option); });
+        });
+        return expanded;
+    }, [""]);
+}
+
+function isHungarianLetter(character) {
+    return /^[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű]$/.test(character);
+}
+
+function restoreHungarianWord(word, isCorrect) {
+    // Do not touch already accented words, identifiers, or words whose search
+    // space is too large to evaluate promptly inside Keyboard Maestro.
+    if (!/^[A-Za-z]+$/.test(word) || !/[aeiouAEIOU]/.test(word)) return word;
+
+    var candidates = accentVariants(word).filter(isCorrect);
+
+    return candidates.length === 1 ? candidates[0] : word;
+}
+
+function preservePhraseCapitalization(source, replacement) {
+    if (source === source.toUpperCase()) return replacement.toUpperCase();
+    if (source.charAt(0) === source.charAt(0).toUpperCase()) {
+        return replacement.charAt(0).toUpperCase() + replacement.slice(1);
+    }
+    return replacement;
+}
+
+function restoreKnownHungarianPhrases(text) {
+    Object.keys(KNOWN_HUNGARIAN_PHRASES).forEach(function (unaccented) {
+        var expression = new RegExp("\\b" + unaccented + "\\b", "gi");
+        text = text.replace(expression, function (source) {
+            return preservePhraseCapitalization(source, KNOWN_HUNGARIAN_PHRASES[unaccented]);
+        });
+    });
+    return text;
+}
+
+function restoreHungarianAccents(text, isCorrect) {
+    text = restoreKnownHungarianPhrases(text.normalize("NFC"));
+    var result = "";
+    var word = "";
+
+    function appendWord() {
+        if (word) result += restoreHungarianWord(word, isCorrect);
+        word = "";
+    }
+
+    Array.from(text).forEach(function (character) {
+        if (isHungarianLetter(character)) word += character;
+        else {
+            appendWord();
+            result += character;
+        }
+    });
+    appendWord();
+    return result;
+}
+
+function hasHungarianSpellChecker(checker) {
+    var languages = checker.availableLanguages;
+    for (var index = 0; index &lt; languages.count; index++) {
+        if (ObjC.unwrap(languages.objectAtIndex(index)) === HUNGARIAN_LANGUAGE) return true;
+    }
+    return false;
+}
+
+function macOSRecognisesHungarianWord(checker, word) {
+    var range = checker.checkSpellingOfStringStartingAtLanguageWrapInSpellDocumentWithTagWordCount(
+        $(word), 0, HUNGARIAN_LANGUAGE, false, 0, Ref()
+    );
+    return String(range.location) === NOT_FOUND_RANGE;
+}
+
+function restoreHungarianAccentsOnSystemClipboard() {
+    ObjC.import("AppKit");
+    var checker = $.NSSpellChecker.sharedSpellChecker;
+    if (!hasHungarianSpellChecker(checker)) {
+        throw new Error("The macOS Hungarian spelling dictionary is unavailable. Add Hungarian in System Settings &gt; Keyboard &gt; Text Input, then try again.");
+    }
+
+    var pasteboard = $.NSPasteboard.generalPasteboard;
+    var value = pasteboard.stringForType($.NSPasteboardTypeString);
+    if (!value || value.isNil()) throw new Error("The selection does not contain text.");
+    var original = ObjC.unwrap(value);
+    if (!original.length) throw new Error("Select the unaccented Hungarian text first.");
+
+    var corrected = restoreHungarianAccents(original, function (word) {
+        return macOSRecognisesHungarianWord(checker, word);
+    });
+    if (corrected === original) return;
+
+    pasteboard.clearContents;
+    if (!pasteboard.setStringForType($(corrected), $.NSPasteboardTypeString)) {
+        throw new Error("Could not prepare the corrected text.");
+    }
+}
+
+if (typeof module !== "undefined") {
+    module.exports = {
+        accentVariants: accentVariants,
+        restoreHungarianWord: restoreHungarianWord,
+        restoreHungarianAccents: restoreHungarianAccents,
+        restoreKnownHungarianPhrases: restoreKnownHungarianPhrases
+    };
+}
+
+restoreHungarianAccentsOnSystemClipboard();
+</string>
+							<key>DisplayKind</key>
+							<string>None</string>
+							<key>IncludedVariables</key>
+							<array/>
+							<key>TrimResults</key>
+							<false/>
+							<key>TrimResultsNew</key>
+							<false/>
+							<key>IncludeStdErr</key>
+							<false/>
+							<key>StopOnFailure</key>
+							<true/>
+							<key>NotifyOnFailure</key>
+							<true/>
+							<key>HonourFailureSettings</key>
+							<true/>
+							<key>TimeOutAbortsMacro</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>ActionUID</key>
+							<integer>13642</integer>
+							<key>MacroActionType</key>
+							<string>CutCopyPaste</string>
+							<key>Action</key>
+							<string>Paste</string>
+							<key>IsDisclosed</key>
+							<false/>
+							<key>TimeOutAbortsMacro</key>
+							<true/>
+						</dict>
+						<dict>
+							<key>ActionUID</key>
+							<integer>13643</integer>
+							<key>MacroActionType</key>
+							<string>SetClipboardToPastClipboard</string>
+							<key>PastExpression</key>
+							<string>2</string>
+						</dict>
+					</array>
 				</dict>
 			</array>
-			<key>Modifiers</key>
-			<integer>6400</integer>
-			<key>Name</key>
-			<string>✑ Text Transformations</string>
-			<key>PaletteUnderMouse</key>
-			<false/>
-			<key>ToggleMacroUID</key>
-			<string>180F7A77-048A-46C1-8E2B-343A67981FD6</string>
-			<key>UID</key>
-			<string>DD1F4A60-FDFB-4420-ABCE-F772FE06B48E</string>
 		</dict>
 	</array>
 	<key>UID</key>
